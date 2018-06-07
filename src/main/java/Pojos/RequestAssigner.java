@@ -10,6 +10,8 @@ public class RequestAssigner {
 	RequestList requestList;
 
 	public String assign(int driverId, int requestId) {
+		if (driverId > 5)
+			return "DriverId cannot be more than 5";
 		for (Request request : requestList.getRequestsList()) {
 			if (request.requestId == requestId && request.status == Status.Waiting) {
 				request.status = Status.Ongoing;

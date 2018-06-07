@@ -19,8 +19,11 @@ repositories {
 
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
+
     compile("org.springframework.boot:spring-boot-starter-web")
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    runtime('org.springframework.boot:spring-boot-devtools')
+
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.7'
 	compile group: 'joda-time', name: 'joda-time', version: '2.9.9'
 	compile group: 'com.google.collections', name: 'google-collections', version: '1.0-rc2'
